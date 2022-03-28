@@ -1,0 +1,20 @@
+{
+    "presets": [
+   
+    ],
+    "plugins": [
+
+      [
+        "babel-plugin-module-resolver",
+        {
+          "root": [
+            "./src"
+          ],
+          "alias": {
+           
+            "@shared": "./shared"
+          }
+        }
+      ]
+    ]
+  }
