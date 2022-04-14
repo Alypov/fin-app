@@ -1,9 +1,14 @@
 import React from 'react';
 import classes from './common-layout.module.scss';
-export const CommonLayout = ({ children }: any) => {
+import { Header } from './components/header';
+
+export const CommonLayout = ({ children, rightSection }: any) => {
+  const leftSection = <div>LOGO</div>;
+ 
+
   return (
     <div className={classes.mainWrapper}>
-      CommonLayout
+      <Header leftSection={leftSection} rightSection={rightSection} />
       {children}
     </div>
   );

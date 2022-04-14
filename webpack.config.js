@@ -14,18 +14,20 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader','css-loader','sass-loader'],
-      }
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
     ],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],
-    alias:{
-      'shared/routes': path.resolve('./src/shared/routes/routes.ts')
-    }
+    alias: {
+      'shared/routes': path.resolve('./src/shared/routes/routes.ts'),
+      'pages/layouts': path.resolve('./src/pages/layouts/'),
+    },
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
 };
